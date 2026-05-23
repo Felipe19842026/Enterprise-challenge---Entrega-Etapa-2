@@ -11,7 +11,3 @@ Site institucional em HTML, CSS e JavaScript para apresentação da plataforma H
 - `style.css`: estilos visuais e responsivos
 - `script.js`: navegação mobile, validação dos formulários e geração de protocolo
 - `assets/logo-hss.svg`: identidade visual
-
-## Publicação
-
-O projeto pode ser publicado em serviços como Vercel, Netlify ou GitHub Pages.
