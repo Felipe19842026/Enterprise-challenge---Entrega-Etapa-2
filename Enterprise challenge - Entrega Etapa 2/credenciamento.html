@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credenciamento | Health Sync Solutions</title>
+  <meta name="description" content="Pré-credenciamento digital de profissionais da saúde na plataforma HSS." />
+  <meta name="theme-color" content="#0b3b66" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Health Sync Solutions"><img class="brand-logo" src="assets/logo-hss.svg" alt="Health Sync Solutions" /></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+    <nav id="menu-principal" class="nav" aria-label="Menu principal">
+      <a href="index.html">Início</a><a href="solucao.html">Solução</a><a href="credenciamento.html" class="active">Credenciamento</a><a href="contato.html" class="nav-cta">Solicitar demonstração</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero compact">
+      <div>
+        <p class="eyebrow">Pré-credenciamento</p>
+        <h1>Inicie o pré-credenciamento de um profissional de saúde.</h1>
+        <p class="lead">Este formulário registra dados profissionais, documentos disponíveis e gera um protocolo para acompanhamento inicial.</p>
+      </div>
+    </section>
+
+    <section class="section form-layout">
+      <aside class="credential-panel">
+        <p class="eyebrow">Status da esteira</p>
+        <h2 id="statusTitle">Início do processo</h2>
+        <p id="statusText">A esteira começa em 0% e avança somente após o envio correto da solicitação.</p>
+        <div class="progress-label"><span>Progresso</span><strong id="progressValue">0%</strong></div>
+        <div class="progress-bar" aria-label="Progresso da esteira"><span id="progressFill"></span></div>
+        <div class="mini-steps" aria-label="Etapas do credenciamento">
+          <div class="mini-step active"><strong>1</strong><span>Cadastro</span></div>
+          <div class="mini-step"><strong>2</strong><span>Documentos</span></div>
+          <div class="mini-step"><strong>3</strong><span>Análise</span></div>
+          <div class="mini-step"><strong>4</strong><span>Conclusão</span></div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=900&q=80" alt="Documentos e registros de saúde sendo analisados em ambiente clínico" />
+      </aside>
+
+      <form id="leadForm" class="lead-form" novalidate>
+        <p class="form-help">Campos marcados com * são obrigatórios.</p>
+        <div class="field-grid">
+          <div><label for="nome">Nome completo *</label><input id="nome" name="nome" type="text" autocomplete="name" minlength="3" required /></div>
+          <div><label for="email">E-mail profissional *</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+          <div><label for="telefone">Telefone / WhatsApp *</label><input id="telefone" name="telefone" type="tel" autocomplete="tel" required /></div>
+          <div><label for="profissao">Profissão *</label><select id="profissao" name="profissao" required><option value="">Selecione</option><option>Médico(a)</option><option>Enfermeiro(a)</option><option>Fisioterapeuta</option><option>Psicólogo(a)</option><option>Nutricionista</option><option>Outro profissional da saúde</option></select></div>
+          <div><label for="registro">Registro profissional *</label><input id="registro" name="registro" type="text" placeholder="CRM, COREN, CRP..." required /></div>
+          <div><label for="instituicao">Instituição *</label><input id="instituicao" name="instituicao" type="text" required /></div>
+        </div>
+        <fieldset class="documents-group">
+          <legend>Documentos disponíveis</legend>
+          <label><input type="checkbox" name="documentos" value="Diploma" /> Diploma ou certificado</label>
+          <label><input type="checkbox" name="documentos" value="Registro no conselho" /> Registro no conselho</label>
+          <label><input type="checkbox" name="documentos" value="Documento de identificação" /> Documento de identificação</label>
+          <label><input type="checkbox" name="documentos" value="Comprovante institucional" /> Comprovante institucional</label>
+        </fieldset>
+        <label for="mensagem">Observações</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Informe detalhes relevantes para a análise."></textarea>
+        <label class="consent"><input id="consentimento" name="consentimento" type="checkbox" required /> Autorizo o uso dos dados informados para análise inicial de pré-credenciamento. *</label>
+        <button class="btn btn-primary full" type="submit">Enviar pré-credenciamento</button>
+        <p id="formFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer"><p>© 2026 Health Sync Solutions</p><p>Pré-credenciamento digital de profissionais de saúde.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

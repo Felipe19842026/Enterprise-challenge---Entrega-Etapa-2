@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demonstração | Health Sync Solutions</title>
+  <meta name="description" content="Agende uma demonstração da plataforma HSS para clínicas, hospitais e operadoras de saúde." />
+  <meta name="theme-color" content="#0b3b66" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Health Sync Solutions"><img class="brand-logo" src="assets/logo-hss.svg" alt="Health Sync Solutions" /></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span></button>
+    <nav id="menu-principal" class="nav" aria-label="Menu principal">
+      <a href="index.html">Início</a><a href="solucao.html">Solução</a><a href="credenciamento.html">Credenciamento</a><a href="contato.html" class="active nav-cta">Solicitar demonstração</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="page-hero contact-hero">
+      <div>
+        <p class="eyebrow">Demonstração institucional</p>
+        <h1>Agende uma apresentação da HSS para a sua equipe.</h1>
+        <p class="lead">Esta página é voltada ao contato comercial da instituição. O credenciamento de profissionais fica separado, em uma área própria, para evitar confusão entre demonstração e cadastro operacional.</p>
+        <div class="hero-actions"><a class="btn btn-secondary" href="credenciamento.html">Ir para credenciamento</a><a class="btn btn-primary" href="#demoForm">Preencher interesse</a></div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1576765607924-3f7b8410a787?auto=format&fit=crop&w=1000&q=80" alt="Equipe de saúde em conversa profissional com apoio de tecnologia" />
+    </section>
+
+    <section class="section form-layout">
+      <aside class="credential-panel">
+        <p class="eyebrow">Para instituições</p>
+        <h2>O que será apresentado</h2>
+        <div class="mini-steps">
+          <div class="mini-step active"><strong>1</strong><span>Fluxo de credenciamento</span></div>
+          <div class="mini-step active"><strong>2</strong><span>Organização de documentos</span></div>
+          <div class="mini-step active"><strong>3</strong><span>Protocolos e status</span></div>
+          <div class="mini-step active"><strong>4</strong><span>Próximas integrações</span></div>
+        </div>
+      </aside>
+
+      <form id="demoForm" class="lead-form" novalidate>
+        <p class="form-help">Informe os dados da instituição para receber retorno sobre a demonstração.</p>
+        <div class="field-grid">
+          <div><label for="demoNome">Nome *</label><input id="demoNome" name="nome" type="text" autocomplete="name" minlength="3" required /></div>
+          <div><label for="demoEmail">E-mail corporativo *</label><input id="demoEmail" name="email" type="email" autocomplete="email" required /></div>
+          <div><label for="demoTelefone">Telefone / WhatsApp *</label><input id="demoTelefone" name="telefone" type="tel" autocomplete="tel" required /></div>
+          <div><label for="demoInstituicao">Instituição *</label><input id="demoInstituicao" name="instituicao" type="text" required /></div>
+          <div><label for="demoPerfil">Perfil da instituição *</label><select id="demoPerfil" name="perfil" required><option value="">Selecione</option><option>Clínica</option><option>Hospital</option><option>Operadora</option><option>Rede de saúde</option><option>Outro</option></select></div>
+          <div><label for="demoVolume">Volume estimado</label><select id="demoVolume" name="volume"><option value="">Selecione</option><option>Até 50 profissionais</option><option>51 a 200 profissionais</option><option>Acima de 200 profissionais</option></select></div>
+        </div>
+        <label for="demoMensagem">Objetivo da demonstração</label>
+        <textarea id="demoMensagem" name="mensagem" placeholder="Conte qual processo sua instituição deseja melhorar."></textarea>
+        <label class="consent"><input id="demoConsentimento" name="consentimento" type="checkbox" required /> Autorizo o contato da HSS para retorno sobre a demonstração. *</label>
+        <button class="btn btn-primary full" type="submit">Solicitar demonstração</button>
+        <p id="demoFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer"><p>© 2026 Health Sync Solutions</p><p>Contato institucional e demonstração da plataforma.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
